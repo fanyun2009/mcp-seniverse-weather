@@ -1,6 +1,9 @@
+from mcp_seniverse_weather.server import mcp
+
+
 def main():
-    """天气服务在运行"""
-    print("mcp-seniverse-weather is running!")
+    """Entry point for the weather mcp server"""
+    mcp.run(transport="stdio")
 
 if __name__ == '__main__':
     main()
