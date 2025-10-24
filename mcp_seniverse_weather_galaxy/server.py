@@ -35,10 +35,13 @@ def current_weather(city:str) -> Dict[str,Any]:
     except RequestException as e:
         error_message = f"Weather API error:{e}"
         # 4xx/5xx的错误类型包含response
-        if hasattr(e,'response') and e.response is not None:
-            error_data = e.response.json()
-            if 'message' in error_data:
-                error_message = f"Weather API error: {error_data['message']}"
+        try:
+            if hasattr(e,'response') and e.response is not None:
+                error_data = e.response.json()
+                if 'message' in error_data:
+                    error_message = f"Weather API error: {error_data['message']}"
+        except ValueError:
+            pass
         return {"error":error_message}
 
 
