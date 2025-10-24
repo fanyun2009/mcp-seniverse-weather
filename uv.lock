@@ -244,8 +244,8 @@ cli = [
 ]
 
 [[package]]
-name = "mcp-seniverse-weather"
-version = "0.1.0"
+name = "mcp-seniverse-weather-galaxy"
+version = "0.2.0"
 source = { editable = "." }
 dependencies = [
     { name = "mcp", extra = ["cli"] },

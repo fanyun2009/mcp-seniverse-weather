@@ -1,5 +1,4 @@
-from mcp_seniverse_weather.server import mcp
-
+from mcp_seniverse_weather_galaxy.server import mcp
 
 def main():
     """Entry point for the weather mcp server"""
